@@ -42,3 +42,20 @@ alphabets = "abcdefghijklmnopqrstuvwxyz"
 for alphabet in alphabets:
     print(S.find(alphabet), end=" ")
 '''
+
+# 1157
+'''
+Word = input().lower()
+Alphabets = 'abcdefghijklmnopqrstuvwxyz'
+Countlist = [Word.count(Alphabet) for Alphabet in Alphabets]
+Max = max(Countlist)
+max_number = 0
+for count in Countlist:
+    if Max == count:
+        max_number += 1
+if max_number == 1:
+    print(Alphabets[Countlist.index(max(Countlist))].upper())
+else:
+    print("?")
+'''
+
