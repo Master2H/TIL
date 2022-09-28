@@ -66,3 +66,14 @@ WordList = Input.split()
 print(len(WordList))
 '''
 
+# 2908
+'''
+A, B = input().split()
+A = A[::-1]
+B = B[::-1]
+if int(A) > int(B):
+    print(int(A))
+else:
+    print(int(B))
+'''
+
