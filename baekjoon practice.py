@@ -59,3 +59,10 @@ else:
     print("?")
 '''
 
+# 1152
+'''
+Input = input().strip()
+WordList = Input.split()
+print(len(WordList))
+'''
+
