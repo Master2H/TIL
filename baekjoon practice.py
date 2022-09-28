@@ -94,3 +94,18 @@ for word in WordList:
 print(Answer)
 '''
 
+# 1712(time limit)
+'''
+A, B, C = map(int, input().split())
+n = 1
+while True:
+    if B >= C:
+        print(-1)
+        break
+    elif A + (B * n) < C * n:
+        print(n)
+        break
+    else:
+        n += 1
+'''
+
