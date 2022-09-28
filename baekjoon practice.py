@@ -77,3 +77,20 @@ else:
     print(int(B))
 '''
 
+# 1316
+'''
+TestCase = int(input())
+Answer = 0
+WordList = [input() for _ in range(TestCase)]
+for word in WordList:
+    character_list = []
+    for character in word:
+        if character not in character_list:
+            character_list.append(character)
+        elif character_list[-1] == character:
+            character_list.append(character)
+    if word == ''.join(character_list):
+        Answer += 1
+print(Answer)
+'''
+
