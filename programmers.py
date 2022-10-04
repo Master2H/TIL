@@ -43,3 +43,15 @@ def solution(numbers):
     return 45 - sum(numbers)
 '''
 
+'''내적
+(내 코드)
+def solution(a, b):
+    answer = [A*B for A, B in zip(a, b)]
+    return sum(answer)
+
+(Best Code)
+def solution(a, b):
+
+    return sum([x*y for x, y in zip(a,b)])
+'''
+
