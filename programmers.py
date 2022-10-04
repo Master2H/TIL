@@ -31,3 +31,15 @@ def solution(absolutes, signs):
 def solution(absolutes, signs):
     return sum(absolutes if sign else -absolutes for absolutes, sign in zip(absolutes, signs))
 '''
+
+'''없는 숫자 더하기
+(내 코드)
+def solution(numbers):
+    answer = [n for n in range(10) if n not in numbers]
+    return sum(answer)
+
+(Best Code)
+def solution(numbers):
+    return 45 - sum(numbers)
+'''
+
