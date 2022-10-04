@@ -15,3 +15,19 @@ def solution(n):
 def solution(n):
     return [x for x in range(1,n+1) if n%x==1][0]
 '''
+
+'''음양 더하기
+(내 코드)
+def solution(absolutes, signs):
+    answer = []
+    for x, y in zip(absolutes, signs):
+        if y == False:
+            answer.append(-x)
+        else:
+            answer.append(x)
+    return sum(answer)
+
+(Best Code)
+def solution(absolutes, signs):
+    return sum(absolutes if sign else -absolutes for absolutes, sign in zip(absolutes, signs))
+'''
