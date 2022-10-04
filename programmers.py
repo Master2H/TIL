@@ -1,6 +1,6 @@
 # lv.1
 '''나머지가 1이 되는 수 찾기
-(내 코드)
+(My Code)
 def solution(n):
     i = 1
     while True:
@@ -17,7 +17,7 @@ def solution(n):
 '''
 
 '''음양 더하기
-(내 코드)
+(My Code)
 def solution(absolutes, signs):
     answer = []
     for x, y in zip(absolutes, signs):
@@ -33,7 +33,7 @@ def solution(absolutes, signs):
 '''
 
 '''없는 숫자 더하기
-(내 코드)
+(My Code)
 def solution(numbers):
     answer = [n for n in range(10) if n not in numbers]
     return sum(answer)
@@ -44,7 +44,7 @@ def solution(numbers):
 '''
 
 '''내적
-(내 코드)
+(My Code)
 def solution(a, b):
     answer = [A*B for A, B in zip(a, b)]
     return sum(answer)
@@ -56,7 +56,7 @@ def solution(a, b):
 '''
 
 '''약수의 개수와 덧셈
-(내 코드)
+(My Code)
 def solution(left, right):
     answer = 0
     for x in range(left, right+1):
@@ -82,7 +82,7 @@ def solution(left, right):
 '''
 
 '''부족한 금액 계산하기
-(내 코드)
+(My Code)
 def solution(price, money, count):
     total_fee = [x*price for x in range(1, count+1)]
     if money - sum(total_fee) >= 0:
@@ -97,7 +97,7 @@ def solution(price, money, count):
 '''
 
 '''3진법 뒤집기
-(내 코드) int()의 10진법 변환 기능은 구글링 활용
+(My Code) int()의 10진법 변환 기능은 구글링 활용
 def solution(n):
     ternary = ''
     while n != 0:
@@ -120,6 +120,7 @@ def solution(n):
 '''
 
 '''예산
+(My Code)
 def solution(d, budget):
     d.sort()
     answer = len(d)
@@ -137,5 +138,47 @@ def solution(d, budget):
     while budget < sum(d):
         d.pop()
     return len(d)
+'''
+
+'''[1차] 비밀지도
+(My Code)
+def solution(n, arr1, arr2):
+    map1 = [list(format(x,'b')) for x in arr1]
+    map2 = [list(format(x,'b')) for x in arr2]
+    answer = []
+    for line in map1:
+        while True:
+            if len(line) != n:
+                line.insert(0, '0')
+            else:
+                break
+    
+    for line in map2:
+        while True:
+            if len(line) != n:
+                line.insert(0, '0')
+            else:
+                break
+    
+    for line1, line2 in zip(map1, map2):
+        answer_line = ''
+        for x, y in zip(line1, line2):
+            if (x == '1') or (y == '1'):
+                answer_line += '#'
+            else:
+                answer_line += ' '
+        answer.append(answer_line)
+    return answer
+
+(Best Code) rjust()(자릿수와 채울 문자 적용)와 비트연산자 활용
+def solution(n, arr1, arr2):
+    answer = []
+    for i,j in zip(arr1,arr2):
+        a12 = str(bin(i|j)[2:])
+        a12=a12.rjust(n,'0')
+        a12=a12.replace('1','#')
+        a12=a12.replace('0',' ')
+        answer.append(a12)
+    return answer
 '''
 
