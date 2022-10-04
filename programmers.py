@@ -119,3 +119,23 @@ def solution(n):
 
 '''
 
+'''예산
+def solution(d, budget):
+    d.sort()
+    answer = len(d)
+    while True:
+        if sum(d[:answer]) <= budget:
+            break
+        else:
+            answer -= 1
+
+    return answer
+
+(Best Code)
+def solution(d, budget):
+    d.sort()
+    while budget < sum(d):
+        d.pop()
+    return len(d)
+'''
+
