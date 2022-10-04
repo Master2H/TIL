@@ -96,3 +96,26 @@ def solution(price, money, count):
     return max(0,price*(count+1)*count//2-money)
 '''
 
+'''3진법 뒤집기
+(내 코드) int()의 10진법 변환 기능은 구글링 활용
+def solution(n):
+    ternary = ''
+    while n != 0:
+        q = n // 3
+        r = n % 3
+        ternary += str(int(r))
+        n = int(q)
+    return int(ternary,3)
+
+(Best Code)
+def solution(n):
+    tmp = ''
+    while n:
+        tmp += str(n % 3)
+        n = n // 3
+
+    answer = int(tmp, 3)
+    return answer
+
+'''
+
