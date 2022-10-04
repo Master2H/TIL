@@ -55,3 +55,29 @@ def solution(a, b):
     return sum([x*y for x, y in zip(a,b)])
 '''
 
+'''약수의 개수와 덧셈
+(내 코드)
+def solution(left, right):
+    answer = 0
+    for x in range(left, right+1):
+        yaksu = []
+        for n in range(1, x+1):
+            if x%n == 0:
+                yaksu.append(n)
+        if len(yaksu) % 2 == 0:
+            answer += x
+        else:
+            answer -= x
+    return answer
+
+(Best Code) 제곱수는 약수의 갯수가 홀수인 것을 활용
+def solution(left, right):
+    answer = 0
+    for i in range(left,right+1):
+        if int(i**0.5)==i**0.5:
+            answer -= i
+        else:
+            answer += i
+    return answer
+'''
+
