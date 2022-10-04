@@ -81,3 +81,18 @@ def solution(left, right):
     return answer
 '''
 
+'''부족한 금액 계산하기
+(내 코드)
+def solution(price, money, count):
+    total_fee = [x*price for x in range(1, count+1)]
+    if money - sum(total_fee) >= 0:
+        answer = 0
+    else:
+        answer = -money + sum(total_fee)
+    return answer
+
+(Best Code) 산술평균 이용한 수학적 사고
+def solution(price, money, count):
+    return max(0,price*(count+1)*count//2-money)
+'''
+
