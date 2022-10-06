@@ -207,3 +207,33 @@ def solution(numbers):
     return sorted(list(set(answer)))
 '''
 
+'''소수 만들기
+(My Code)
+from itertools import combinations
+
+def solution(nums):
+    answer = []
+    prime_numbers = [sum(nC3) for nC3 in list(combinations(nums, 3))]
+    for prime_number in prime_numbers:
+        check_pn = 0
+        for n in range(1, prime_number+1):
+            if prime_number % n == 0:
+                check_pn += 1
+        if check_pn == 2:
+            answer.append(prime_number)
+    return len(answer)
+
+(Best Code)
+def solution(nums):
+    from itertools import combinations as cb
+    answer = 0
+    for a in cb(nums, 3):
+        cand = sum(a)
+        for j in range(2, cand):
+            if cand%j==0:
+                break
+        else:
+            answer += 1
+    return answer
+'''
+
