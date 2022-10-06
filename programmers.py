@@ -237,3 +237,53 @@ def solution(nums):
     return answer
 '''
 
+'''실패율
+(My Code1-Runtime Error)
+import operator
+
+def solution(N, stages):
+    fail = dict()
+    for n in range(1, N+1):
+        nomi = 0
+        deno = 0
+        for stage in stages:
+            if n <= stage:
+                deno += 1
+            if n == stage:
+                nomi += 1
+        fail[n] = nomi / deno
+    sort_fail = sorted(fail.items(), key=operator.itemgetter(1), reverse = True)
+    answer = [x for x, y in sort_fail]
+    return answer
+
+(My Code2-Google 참고)
+import operator
+
+def solution(N, stages):
+    fail = dict()
+    deno = len(stages)
+    for stage in range(1, N+1):
+        if deno != 0:
+            count = stages.count(stage)
+            fail[stage] = count / deno
+            deno -= count
+        else:
+            fail[stage] = 0
+    sort_fail = sorted(fail.items(), key=operator.itemgetter(1), reverse = True)
+    answer = [x for x, y in sort_fail]
+    return answer
+
+(Best Code)
+def solution(N, stages):
+    result = {}
+    denominator = len(stages)
+    for stage in range(1, N+1):
+        if denominator != 0:
+            count = stages.count(stage)
+            result[stage] = count / denominator
+            denominator -= count
+        else:
+            result[stage] = 0
+    return sorted(result, key=lambda x : result[x], reverse=True)
+'''
+
