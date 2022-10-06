@@ -182,3 +182,28 @@ def solution(n, arr1, arr2):
     return answer
 '''
 
+'''두 개 뽑아서 더하기
+(My Code)
+def solution(numbers):
+    answer = []
+    i = 0
+    j = i + 1
+    while i != len(numbers) - 1:
+        answer.append(numbers[i] + numbers[j])
+        if j == len(numbers) - 1:
+            i += 1
+            j = i + 1
+        else:
+            j += 1
+
+    return sorted(list(set(answer)))
+
+(Best Code)
+def solution(numbers):
+    answer = []
+    for i in range(len(numbers)):
+        for j in range(i+1, len(numbers)):
+            answer.append(numbers[i] + numbers[j])
+    return sorted(list(set(answer)))
+'''
+
