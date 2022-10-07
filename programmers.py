@@ -364,3 +364,46 @@ def solution(dartResult):
     return sum(answer)
 '''
 
+'''로도의 최고 순위와 최저 순위
+(My Code)
+def solution(lottos, win_nums):
+    answer = [0, 0]
+
+    for n in lottos:
+        count = 0
+        if n in win_nums:
+            answer[0] += 1
+            answer[1] += 1
+        if n == 0:
+            count += 1
+        answer[0] += count
+
+    rank = [0, 0]
+    for i in range(len(answer)):
+        if answer[i] == 6:
+            rank[i] = 1
+        if answer[i] == 5:
+            rank[i] = 2
+        if answer[i] == 4:
+            rank[i] = 3
+        if answer[i] == 3:
+            rank[i] = 4
+        if answer[i] == 2:
+            rank[i] = 5
+        if answer[i] <= 1:
+            rank[i] = 6
+
+    return rank
+
+(Best Code)
+def solution(lottos, win_nums):
+    rank = [6, 6, 5, 4, 3, 2, 1]
+    count_0 = lottos.count(0)
+    ans = 0
+    for i in lottos:
+        if i in win_nums:
+            ans += 1
+    return rank[ans + count_0], rank[ans]
+
+'''
+
