@@ -287,3 +287,80 @@ def solution(N, stages):
     return sorted(result, key=lambda x : result[x], reverse=True)
 '''
 
+'''[1차] 다트 게임
+(My Code)
+def solution(dartResult):
+    if "S" in dartResult:
+        dartResult = dartResult.replace("S","^1,")
+    if "D" in dartResult:
+        dartResult = dartResult.replace("D","^2,")
+    if "T" in dartResult:
+        dartResult = dartResult.replace("T","^3,")
+    if ",#" in dartResult:
+        dartResult = dartResult.replace(",#","x(-1),")
+    dartResult = dartResult.split(",")
+
+    for score in dartResult:
+        if "*" in score:
+            if dartResult.index(score) == 1:
+                dartResult[0] += "x2"
+            elif dartResult.index(score) == 2:
+                dartResult[0] += "x2"
+                dartResult[1] += "x2"
+            elif dartResult.index(score) == 3:
+                dartResult[1] += "x2"
+                dartResult[2] += "x2"
+            elif dartResult.index(score) == 4:
+                dartResult[2] += "x2"
+                dartResult[3] += "x2"
+    answer = []
+    for x in dartResult:
+        if (x == "") or (x =="*"):
+            pass
+        elif "*" in x:
+            answer.append(x.replace("*",""))
+        else:
+            answer.append(x)
+
+    answer_1 = []
+    for a in answer:
+        if "^" in a:
+            answer_1.append(a.replace("^","**"))
+
+    answer_2 = []
+    for a in answer_1:
+        if "x" in a:
+            answer_2.append(a.replace("x","*"))
+        else:
+            answer_2.append(a)
+
+    final = []
+    for i in answer_2:
+        final.append(eval(i))
+    return sum(final)
+
+(Best Code)
+def solution(dartResult):
+    point = []
+    answer = []
+    dartResult = dartResult.replace('10','k')
+    point = ['10' if i == 'k' else i for i in dartResult]
+    print(point)
+
+    i = -1
+    sdt = ['S', 'D', 'T']
+    for j in point:
+        if j in sdt :
+            answer[i] = answer[i] ** (sdt.index(j)+1)
+        elif j == '*':
+            answer[i] = answer[i] * 2
+            if i != 0 :
+                answer[i - 1] = answer[i - 1] * 2
+        elif j == '#':
+            answer[i] = answer[i] * (-1)
+        else:
+            answer.append(int(j))
+            i += 1
+    return sum(answer)
+'''
+
