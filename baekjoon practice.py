@@ -105,3 +105,17 @@ else:
     print(n+1)
 '''
 
+# 2292
+'''
+N = int(input())
+answer = 1
+Stage = 1
+while True:
+    if N <= Stage:
+        print(answer)
+        break
+    else:
+        Stage += 6*(answer)
+        answer += 1
+'''
+
