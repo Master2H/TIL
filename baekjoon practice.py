@@ -119,3 +119,18 @@ while True:
         answer += 1
 '''
 
+'''
+# 1193(미완)
+N = int(input())
+First = "1/1"
+Second = "1/2"
+answer = "2/1"
+for i in range(N):
+    if N == 1:
+        print(First)
+    if N >3:
+        if int(answer[:answer.find("/") + 1])  == 1:
+            answer[answer.find("/") + 1:] = str(int(answer[answer.find("/") + 1:]+1))
+
+Fourth = "3/1" 2/2 1/3 1/4 2/3 3/2 4/1
+'''
