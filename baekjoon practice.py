@@ -121,16 +121,28 @@ while True:
 
 '''
 # 1193(미완)
-N = int(input())
-First = "1/1"
-Second = "1/2"
-answer = "2/1"
-for i in range(N):
-    if N == 1:
-        print(First)
-    if N >3:
-        if int(answer[:answer.find("/") + 1])  == 1:
-            answer[answer.find("/") + 1:] = str(int(answer[answer.find("/") + 1:]+1))
+def frac(List):
 
-Fourth = "3/1" 2/2 1/3 1/4 2/3 3/2 4/1
+    List[-1] - N
+N = int(input())
+Answer=[]
+Range = 0
+i = 1
+while N > Range:
+    Range += i
+    Answer.append(Range)
+    i += 1
+print(N, Answer)
+
+if len(Answer) % 2 == 1:
+    standard = "1" + "/" + str(Answer.index(Answer[-1])+1)
+    for _ in range(Answer[-1] - N):
+        standard[standard.find("/"):] = str(int(standard[standard.find("/"):])+1)
+        standard[:standard.find("/")+1] = str(int(standard[:standard.find("/")+1])-1)
+elif len(Answer) % 2 == 0:
+    standard =str(Answer.index(Answer[-1])+1)  + "/" + "1" 
+    for _ in range(Answer[-1] - N):
+        standard[standard.find("/"):] = str(int(standard[standard.find("/"):])-1)
+        standard[:standard.find("/")+1] = str(int(standard[:standard.find("/")+1])+1)
+print(standard)
 '''
