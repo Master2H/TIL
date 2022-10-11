@@ -119,11 +119,9 @@ while True:
         answer += 1
 '''
 
-'''
-# 1193(미완)
-def frac(List):
 
-    List[-1] - N
+# 1193(미완)
+'''
 N = int(input())
 Answer=[]
 Range = 0
@@ -136,13 +134,15 @@ print(N, Answer)
 
 if len(Answer) % 2 == 1:
     standard = "1" + "/" + str(Answer.index(Answer[-1])+1)
-    for _ in range(Answer[-1] - N):
-        standard[standard.find("/"):] = str(int(standard[standard.find("/"):])+1)
-        standard[:standard.find("/")+1] = str(int(standard[:standard.find("/")+1])-1)
+    for i in range(Answer[-1] - N):
+        standard[standard.find("/"):] = str(int(standard[standard.find("/"):])+i)
+        print(standard[standard.find("/"):])
+        standard[:standard.find("/")+1] = str(int(standard[:standard.find("/")+1])-i)
+        print(standard[:standard.find("/")+1])
 elif len(Answer) % 2 == 0:
     standard =str(Answer.index(Answer[-1])+1)  + "/" + "1" 
     for _ in range(Answer[-1] - N):
-        standard[standard.find("/"):] = str(int(standard[standard.find("/"):])-1)
-        standard[:standard.find("/")+1] = str(int(standard[:standard.find("/")+1])+1)
+        standard[standard.find("/"):] = str(int(standard[standard.find("/"):])-i)
+        standard[:standard.find("/")+1] = str(int(standard[:standard.find("/")+1])+i)
 print(standard)
 '''
