@@ -121,7 +121,7 @@ while True:
 
 
 # 1193 time out - google reference
-'''
+'''(Best Code/ Copy Code)
 N = int(input())
 max_num = 0
 line = 0
@@ -138,5 +138,15 @@ else:
     denom = gap + 1
 
 print(f"{numer}/{denom}")
+'''
+
+# 2869 error - google reference
+'''
+A, B, V = map(int, input().split())
+
+if (V - B) % (A - B) == 0:
+    print((V - B) //  (A - B))
+else:
+    print((V - B) // (A - B) + 1)
 '''
 
