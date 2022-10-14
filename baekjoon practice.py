@@ -120,29 +120,23 @@ while True:
 '''
 
 
-# 1193(미완)
+# 1193 time out - google reference
 '''
 N = int(input())
-Answer=[]
-Range = 0
-i = 1
-while N > Range:
-    Range += i
-    Answer.append(Range)
-    i += 1
-print(N, Answer)
+max_num = 0
+line = 0
+while N > max_num:
+    line += 1
+    max_num += line
 
-if len(Answer) % 2 == 1:
-    standard = "1" + "/" + str(Answer.index(Answer[-1])+1)
-    for i in range(Answer[-1] - N):
-        standard[standard.find("/"):] = str(int(standard[standard.find("/"):])+i)
-        print(standard[standard.find("/"):])
-        standard[:standard.find("/")+1] = str(int(standard[:standard.find("/")+1])-i)
-        print(standard[:standard.find("/")+1])
-elif len(Answer) % 2 == 0:
-    standard =str(Answer.index(Answer[-1])+1)  + "/" + "1" 
-    for _ in range(Answer[-1] - N):
-        standard[standard.find("/"):] = str(int(standard[standard.find("/"):])-i)
-        standard[:standard.find("/")+1] = str(int(standard[:standard.find("/")+1])+i)
-print(standard)
+gap = max_num - N
+if line % 2 == 1:
+    numer = gap + 1
+    denom = line - gap
+else:
+    numer = line - gap
+    denom = gap + 1
+
+print(f"{numer}/{denom}")
 '''
+
