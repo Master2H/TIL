@@ -149,17 +149,21 @@ if (V - B) % (A - B) == 0:
 else:
     print((V - B) // (A - B) + 1)
 '''
-'''미완
+
+# 10250
+'''
 test_case = int(input())
 for _ in range(test_case):
     H, W, N = map(int, input().split())
-    Q = N//H
     if N%H == 0:
-        numer = H
+        floor = H
+        back = N//H
     else:
-        numer = N%H
-    if Q < 10:
-        print(int(f"{numer}0{Q+1}"))
+        floor = N%H
+        back = N//H +1
+    if back < 10:
+        print(int(f"{floor}0{back}"))
     else:
-        print(int(f"{numer}{Q+1}"))
+        print(int(f"{floor}{back}"))
 '''
+
