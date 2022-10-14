@@ -167,3 +167,14 @@ for _ in range(test_case):
         print(int(f"{floor}{back}"))
 '''
 
+'''(미완)
+test_case = int(input())
+for _ in range(test_case):
+    k = int(input())
+    n = int(input())
+    num_list = [x+1 for x in range(n)]
+    floor = []
+    for i in range(k):
+        floor.append(sum(num_list[i+1:]))
+    print(floor)
+'''
