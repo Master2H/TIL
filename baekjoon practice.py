@@ -174,8 +174,11 @@ for _ in range(test_case):
     k = int(input())
     n = int(input())
     num_list = [x+1 for x in range(n)]
-    floor = []
-    for i in range(k):
-        floor.append(sum(num_list[i+1:]))
-print(num_list)
+    floor = [sum(num_list[:i+1]) for i in range(n)]
+    if k == 1:
+        print(sum(floor))
+    else:
+        for _ in range(k-1):
+            floor = [sum(floor[:i+1]) for i in range(n)]
+        print(sum(floor))
 '''
