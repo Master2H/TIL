@@ -1,9 +1,3 @@
-# TIL Day 01
-
----
-
-> 2022년 07월 25일 월요일
-
 ## Why Git & Github?
 ---
 ![Git로고](https://user-images.githubusercontent.com/49775540/168756716-68f9aebb-380f-4897-8141-78d8403f6113.png)
