@@ -167,18 +167,59 @@ for _ in range(test_case):
         print(int(f"{floor}{back}"))
 '''
 
+# 2775
 '''
-# 2775(미완)
 test_case = int(input())
 for _ in range(test_case):
     k = int(input())
     n = int(input())
-    num_list = [x+1 for x in range(n)]
-    floor = [sum(num_list[:i+1]) for i in range(n)]
+    f1 = [sum(range(i+2)) for i in range(n)]
     if k == 1:
-        print(sum(floor))
+        print(f1[-1])
     else:
-        for _ in range(k-1):
-            floor = [sum(floor[:i+1]) for i in range(n)]
-        print(sum(floor))
+        for j in range(k-1):
+            f1 = [sum(f1[:j+1]) for j in range(n)]
+        print(f1[-1])
 '''
+
+# 10807
+'''
+N = int(input())
+num_list = [int(i) for i in input().split()]
+number = int(input())
+print(num_list.count(number))
+'''
+
+# 5597
+'''
+good_student = [int(input()) for _ in range(28)]
+for i in range(30):
+    if i+1 not in good_student:
+        print(i+1)
+'''
+
+# 2839
+'''
+N = int(input())
+Q = N // 5
+if Q == 0:
+    if N == 3:
+        print(1)
+        Q=-2
+    else:
+        print(-1)
+        Q=-2
+while Q >= 0:
+    if N - 5*Q == 0:
+        print(Q)
+        break
+    elif (N -5*Q) % 3 == 0:
+        print(Q+((N -5*Q)//3))
+        break
+    else:
+        Q -= 1
+
+if Q == -1:
+    print(-1)
+'''
+
