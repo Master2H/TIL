@@ -364,7 +364,7 @@ def solution(dartResult):
     return sum(answer)
 '''
 
-'''로도의 최고 순위와 최저 순위
+'''로또의 최고 순위와 최저 순위
 (My Code)
 def solution(lottos, win_nums):
     answer = [0, 0]
