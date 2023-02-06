@@ -229,3 +229,15 @@ Answer = [int(a) for a in input().split()]
 print(sum(Answer))
 '''
 
+# 1978
+import math
+testCase = int(input())
+numberList = [int(a) for a in input().split()]
+answer = 0
+for i in numberList:
+    for j in range(2,int(math.sqrt(i))):
+        print(j)
+        if i % j != 0:
+            pass
+        else:
+            break
