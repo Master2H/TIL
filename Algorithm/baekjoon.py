@@ -223,3 +223,9 @@ if Q == -1:
     print(-1)
 '''
 
+# 10757
+'''
+Answer = [int(a) for a in input().split()]
+print(sum(Answer))
+'''
+
