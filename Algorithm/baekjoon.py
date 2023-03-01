@@ -229,7 +229,8 @@ Answer = [int(a) for a in input().split()]
 print(sum(Answer))
 '''
 
-# 1978
+# 1978 (미완)
+'''
 import math
 testCase = int(input())
 numberList = [int(a) for a in input().split()]
@@ -241,3 +242,11 @@ for i in numberList:
             pass
         else:
             break
+'''
+
+# 11382
+'''
+answerList = [int(x) for x in input().split()]
+print(sum(answerList))
+'''
+
