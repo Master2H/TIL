@@ -281,3 +281,13 @@ print(*answer)
 '''
 
 
+# 10811
+'''
+N, M = map(int, input().split())
+answer = [x+1 for x in range(N)]
+for _ in range(M):
+    a, b = map(int, input().split())
+    answer[a-1:b] = answer[a-1:b][::-1]
+print(*answer)
+'''
+
