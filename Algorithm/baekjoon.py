@@ -305,3 +305,15 @@ for _ in range(testCase):
     print(x[0]+x[-1])
 '''
 
+# 11718 (error - google reference)
+'''
+while True:
+    try:
+        a = input()
+        print(a)
+    except:
+        break
+# try-except 구문으로 예외처리하는 법 잊지 말자!
+'''
+
+
