@@ -316,4 +316,13 @@ while True:
 # try-except 구문으로 예외처리하는 법 잊지 말자!
 '''
 
+# 2444
+'''
+x = int(input())
+for i in range(1,2*x):
+    if i <= x:
+        print(" "*int(((2*x-1-(2*i-1))/2))+"*"*(2*i-1))
+    else:
+        print(" "*int((2*x-1-(2*(2*x-i)-1))/2)+"*"*(2*(2*x-i)-1))
+'''
 
