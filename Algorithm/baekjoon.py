@@ -351,3 +351,9 @@ for x in scoreGrade:
 print(round(total/scoreSum,6))
 '''
 
+# 25314
+'''
+N = int(input())
+print("long "*int(N/4)+"int")
+'''
+
