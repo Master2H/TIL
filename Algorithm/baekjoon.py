@@ -297,3 +297,11 @@ answer = input()
 print(len(answer))
 '''
 
+# 9086
+'''
+testCase = int(input())
+for _ in range(testCase):
+    x = input()
+    print(x[0]+x[-1])
+'''
+
