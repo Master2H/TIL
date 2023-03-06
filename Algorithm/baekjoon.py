@@ -326,3 +326,12 @@ for i in range(1,2*x):
         print(" "*int((2*x-1-(2*(2*x-i)-1))/2)+"*"*(2*(2*x-i)-1))
 '''
 
+# 10812
+'''
+N, M = map(int, input().split())
+answer = [x+1 for x in range(N)]
+for _ in range(M):
+    a, b, c = map(int, input().split())
+    answer[a-1:b] =  answer[c-1:b] + answer[a-1:c-1]
+print(*answer)
+'''
