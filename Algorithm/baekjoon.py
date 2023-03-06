@@ -291,3 +291,9 @@ for _ in range(M):
 print(*answer)
 '''
 
+# 2743
+'''
+answer = input()
+print(len(answer))
+'''
+
