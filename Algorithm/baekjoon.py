@@ -250,3 +250,21 @@ answerList = [int(x) for x in input().split()]
 print(sum(answerList))
 '''
 
+# 10810
+'''
+N, M = map(int, input().split())
+answer = [0 for _ in range(N)]
+for _ in range(M):
+    a, b, c = map(int, input().split())
+    answer[a-1:b] = [c for _ in range(b-(a-1))]
+for i in answer:
+    print(i, end=" ")
+(Best Code)
+N, M = map(int, input().split())
+answer = [0 for _ in range(N)]
+for _ in range(M):
+    a, b, c = map(int, input().split())
+    answer[a-1:b] = [c for _ in range(b-(a-1))]
+print(*answer)
+'''
+
