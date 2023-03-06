@@ -47,14 +47,14 @@ for alphabet in alphabets:
 '''
 Word = input().lower()
 Alphabets = 'abcdefghijklmnopqrstuvwxyz'
-Countlist = [Word.count(Alphabet) for Alphabet in Alphabets]
-Max = max(Countlist)
+Countx = [Word.count(Alphabet) for Alphabet in Alphabets]
+Max = max(Countx)
 max_number = 0
-for count in Countlist:
+for count in Countx:
     if Max == count:
         max_number += 1
 if max_number == 1:
-    print(Alphabets[Countlist.index(max(Countlist))].upper())
+    print(Alphabets[Countx.index(max(Countx))].upper())
 else:
     print("?")
 '''
@@ -62,8 +62,8 @@ else:
 # 1152
 '''
 Input = input().strip()
-WordList = Input.split()
-print(len(WordList))
+Wordx = Input.split()
+print(len(Wordx))
 '''
 
 # 2908
@@ -81,15 +81,15 @@ else:
 '''
 TestCase = int(input())
 Answer = 0
-WordList = [input() for _ in range(TestCase)]
-for word in WordList:
-    character_list = []
+Wordx = [input() for _ in range(TestCase)]
+for word in Wordx:
+    character_x = []
     for character in word:
-        if character not in character_list:
-            character_list.append(character)
-        elif character_list[-1] == character:
-            character_list.append(character)
-    if word == ''.join(character_list):
+        if character not in character_x:
+            character_x.append(character)
+        elif character_x[-1] == character:
+            character_x.append(character)
+    if word == ''.join(character_x):
         Answer += 1
 print(Answer)
 '''
@@ -185,9 +185,9 @@ for _ in range(test_case):
 # 10807
 '''
 N = int(input())
-num_list = [int(i) for i in input().split()]
+num_x = [int(i) for i in input().split()]
 number = int(input())
-print(num_list.count(number))
+print(num_x.count(number))
 '''
 
 # 5597
@@ -233,9 +233,9 @@ print(sum(Answer))
 '''
 import math
 testCase = int(input())
-numberList = [int(a) for a in input().split()]
+numberx = [int(a) for a in input().split()]
 answer = 0
-for i in numberList:
+for i in numberx:
     for j in range(2,int(math.sqrt(i))):
         print(j)
         if i % j != 0:
@@ -246,8 +246,8 @@ for i in numberList:
 
 # 11382
 '''
-answerList = [int(x) for x in input().split()]
-print(sum(answerList))
+answerx = [int(x) for x in input().split()]
+print(sum(answerx))
 '''
 
 # 10810
@@ -335,3 +335,19 @@ for _ in range(M):
     answer[a-1:b] =  answer[c-1:b] + answer[a-1:c-1]
 print(*answer)
 '''
+
+# 25206
+'''
+subjectDict = {"A+":4.5, "A0":4.0, "B+":3.5, "B0":3.0, "C+":2.5, "C0":2.0, "D+":1.5, "D0":1.0, "F":0.0}
+scoreGrade = [input().split()[1:] for _ in range(20)]
+total = 0
+scoreSum = 0
+for x in scoreGrade:
+    try:
+        total += float(x[0]) * subjectDict[x[1]]
+        scoreSum += float(x[0])
+    except:
+        continue
+print(round(total/scoreSum,6))
+'''
+
