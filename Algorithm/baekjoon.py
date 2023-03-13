@@ -358,7 +358,20 @@ print("long "*int(N/4)+"int")
 '''
 
 # 27866
+'''
 S = input()
 i = int(input())
 print(S[i-1])
+'''
+
+# 2738
+'''
+N, M = map(int,input().split())
+A = [list(map(int, input().split())) for _ in range(N)]
+B = [list(map(int, input().split())) for _ in range(N)]
+for i, j in zip(A,B):
+    for k in range(M):
+        print(i[k]+j[k], end=" ")
+    print(end="\n")
+'''
 
