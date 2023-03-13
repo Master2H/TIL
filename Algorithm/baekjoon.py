@@ -357,3 +357,8 @@ N = int(input())
 print("long "*int(N/4)+"int")
 '''
 
+# 27866
+S = input()
+i = int(input())
+print(S[i-1])
+
