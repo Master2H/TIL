@@ -390,4 +390,19 @@ print(maxNumber)
 print(rowNumber, matrix[rowNumber-1].index(maxNumber)+1)
 '''
 
+# 10798
+'''
+wordList = [input() for _ in range(5)]
+maxLength = 0
+for word in wordList:
+    if len(word) >= maxLength:
+        maxLength = len(word)
+
+for n in range(maxLength):
+        for word in wordList:
+            try:
+                    print(word[n], end = '')
+            except:
+                    pass
+'''
 
