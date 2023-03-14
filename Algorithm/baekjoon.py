@@ -375,3 +375,19 @@ for i, j in zip(A,B):
     print(end="\n")
 '''
 
+# 2566
+'''
+matrix = [list(map(int, input().split())) for _ in range(9)]
+maxNumber = 0
+rowNumber = 0
+for number, row in enumerate(matrix, start=1):
+    if maxNumber <= max(row):
+        maxNumber = max(row)
+        rowNumber = number
+    else:
+        pass
+print(maxNumber)
+print(rowNumber, matrix[rowNumber-1].index(maxNumber)+1)
+'''
+
+
