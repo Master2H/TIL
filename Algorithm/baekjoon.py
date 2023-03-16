@@ -421,4 +421,21 @@ for i in range(100):
 print(answer)
 '''
 
+# 5086
+'''
+while True:
+    x, y = map(int, input().split())
+    if x == 0:
+        break
+    elif x > y:
+        if x % y == 0:
+            print("multiple")
+        else:
+            print("neither")
+    else:
+        if y % x == 0:
+            print("factor")
+        else:
+            print("neither")
+'''
 
