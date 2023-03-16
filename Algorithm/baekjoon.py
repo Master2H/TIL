@@ -512,3 +512,37 @@ while i <= N:
     i += 1
 '''
 
+# 9020
+'''
+testCase = int(input())
+for _ in range(testCase):
+    N = int(input())
+    A, B = N // 2, N // 2
+    if N == 4:
+        print(2, 2)
+    else:
+        if A % 2 == 0:
+            A = A - 1
+            B = B + 1
+        while True:
+            temp = []
+            for i in range(1, A+1):
+                if A % i == 0:
+                    temp.append(i)
+                    if len(temp) >= 3:
+                        break
+            if len(temp) == 2:
+                temp2=[]
+                for j in range(1, B+1):
+                    if B % j == 0:
+                        temp2.append(j)
+                        if len(temp2) >= 3:
+                            break
+                if len(temp2) == 2:
+                    if A + B == N:
+                        print(A, B)
+                        break
+            A -= 2
+            B += 2
+'''
+
