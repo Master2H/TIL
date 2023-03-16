@@ -406,3 +406,19 @@ for n in range(maxLength):
                     pass
 '''
 
+# 2563
+'''
+testCase = int(input())
+paper = [[0]*100 for _ in range(100)]
+for _ in range(testCase):
+    a, b = map(int, input().split())
+    for x in range(a, 10+a):
+        for y in range(10):
+            paper[100-b-y][x] = 1
+answer = 0
+for i in range(100):
+        answer += paper[i].count(1)
+print(answer)
+'''
+
+
