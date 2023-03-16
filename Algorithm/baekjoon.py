@@ -465,3 +465,18 @@ while True:
             print(f"{x} is NOT perfect.")
 '''
 
+# 1978
+'''
+testCase = int(input())
+numberList = list(map(int, input().split()))
+answerList = []
+for i in numberList:
+    temp = []
+    for j in range(1, i+1):
+        if i % j == 0:
+            temp.append(j)
+    if len(temp) == 2:
+        answerList.append(i)
+print(len(answerList))
+'''
+
