@@ -449,4 +449,19 @@ else:
     print(factorList[K-1])
 '''
 
+# 9506
+'''
+while True:
+    x = int(input())
+    if x < 0:
+        break
+    else:
+        factorList = [i for i in range(1,x) if x % i == 0]
+        if sum(factorList) == x:
+            factorList = list(map(str,factorList))
+            print(str(x) + " = ", end = "")
+            print(" + ".join(factorList))
+        else:
+            print(f"{x} is NOT perfect.")
+'''
 
