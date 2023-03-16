@@ -480,3 +480,22 @@ for i in numberList:
 print(len(answerList))
 '''
 
+# 2581
+'''
+M = int(input())
+N = int(input())
+answerList = []
+for i in range(M,N+1):
+    temp = []
+    for j in range(1, i+1):
+        if i % j == 0:
+            temp.append(j)
+    if len(temp) == 2:
+        answerList.append(i)
+if len(answerList) == 0:
+    print(-1)
+else:
+    print(sum(answerList))
+    print(min(answerList))
+'''
+
