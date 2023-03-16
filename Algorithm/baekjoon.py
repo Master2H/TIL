@@ -439,3 +439,14 @@ while True:
             print("neither")
 '''
 
+# 2501
+'''
+N, K = map(int, input().split())
+factorList = [i for i in range(1, N+1) if N % i == 0]
+if len(factorList) < K:
+    print(0)
+else:
+    print(factorList[K-1])
+'''
+
+
