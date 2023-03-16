@@ -499,3 +499,16 @@ else:
     print(min(answerList))
 '''
 
+# 11653
+'''
+N = int(input())
+i = 2
+while i <= N:
+    if N == 1:
+        break
+    while N % i == 0:
+        print(i)
+        N = N // i
+    i += 1
+'''
+
