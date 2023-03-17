@@ -628,3 +628,19 @@ for i in sorted(numberList):
     print(i)
 '''
 
+# 10989
+'''
+import sys
+
+testCase = int(sys.stdin.readline())
+numberList = [0] * 10000
+for _ in range(testCase):
+    n = int(sys.stdin.readline())
+    numberList[n-1] += 1
+
+for i in range(0,10000):
+    if numberList[i] > 0:
+        for _ in range(numberList[i]):
+            print(i+1)
+'''
+
