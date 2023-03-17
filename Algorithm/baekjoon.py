@@ -613,3 +613,10 @@ numberList = [int(input()) for _ in range(5)]
 print(int(sum(numberList)/5), sorted(numberList)[2])
 '''
 
+# 25305
+'''
+N, k = map(int, input().split())
+scoreList = list(map(int, input().split()))
+print(sorted(scoreList)[-k])
+'''
+
