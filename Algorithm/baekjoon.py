@@ -595,8 +595,6 @@ print(f"""{sum(answer)}
 a1, a0 = map(int, input().split())
 c = int(input())
 n0 = int(input())
-fn = a1*n0 + a0
-gn = c*n0
 
 while n0 <= 100:
     if c*n0 >= a1*n0 + a0:
@@ -607,5 +605,11 @@ while n0 <= 100:
 
 if n0 >= 101:
     print(1)
+'''
+
+# 2587
+'''
+numberList = [int(input()) for _ in range(5)]
+print(int(sum(numberList)/5), sorted(numberList)[2])
 '''
 
