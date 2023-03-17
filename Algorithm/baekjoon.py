@@ -590,3 +590,22 @@ print(f"""{sum(answer)}
 3""")
 '''
 
+# 24313
+'''
+a1, a0 = map(int, input().split())
+c = int(input())
+n0 = int(input())
+fn = a1*n0 + a0
+gn = c*n0
+
+while n0 <= 100:
+    if c*n0 >= a1*n0 + a0:
+        n0 += 1
+    else:
+        print(0)
+        break
+
+if n0 >= 101:
+    print(1)
+'''
+
