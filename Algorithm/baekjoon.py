@@ -546,3 +546,9 @@ for _ in range(testCase):
             B += 2
 '''
 
+# 24262
+'''
+print("""1
+0""")
+'''
+
