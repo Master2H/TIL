@@ -620,3 +620,11 @@ scoreList = list(map(int, input().split()))
 print(sorted(scoreList)[-k])
 '''
 
+# 2751
+'''
+testCase = int(input())
+numberList = [int(input()) for _ in range(testCase)]
+for i in sorted(numberList):
+    print(i)
+'''
+
