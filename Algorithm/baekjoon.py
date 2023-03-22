@@ -644,3 +644,22 @@ for i in range(0,10000):
             print(i+1)
 '''
 
+# 2798
+'''
+import sys
+from itertools import combinations
+
+N, M = map(int, sys.stdin.readline().split())
+numList = list(map(int, sys.stdin.readline().split()))
+numList.sort()
+answerList = []
+for i in combinations(numList, 3):
+    answerList.append(sum(i))
+answerList.sort()
+answer=0
+for j in answerList:
+    if j <= M:
+        answer = j
+print(answer)
+'''
+
