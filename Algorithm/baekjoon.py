@@ -665,6 +665,7 @@ print(answer)
 
 # 2231
 '''
+(My Code)
 import sys
 
 N = int(sys.stdin.readline())
@@ -678,5 +679,19 @@ if N in bhhList:
     print(bhhList.index(N)+1)
 else:
     print(0)
+
+(Best Code)
+n = int(input())
+
+for i in range(1, n+1):
+    num = i
+    num_sum = sum(map(int, str(i)))
+    num = num + num_sum
+
+    if num == n:
+        print(i)
+        break
+    if n == i:
+        print(0)
 '''
 
