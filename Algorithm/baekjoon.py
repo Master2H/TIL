@@ -663,3 +663,20 @@ for j in answerList:
 print(answer)
 '''
 
+# 2231
+'''
+import sys
+
+N = int(sys.stdin.readline())
+bhhList=[]
+for i in range(1,1000001):
+    bhh = [i]
+    for j in range(len(str(i))):
+        bhh.append(int(str(i)[j]))
+    bhhList.append(sum(bhh))
+if N in bhhList:
+    print(bhhList.index(N)+1)
+else:
+    print(0)
+'''
+
