@@ -695,3 +695,19 @@ for i in range(1, n+1):
         print(0)
 '''
 
+
+# 19532
+'''
+a, b, c, d, e, f = map(int, input().split())
+x = -1000
+y = -1000
+for i in range(-999,1000):
+    for j in range(-999,1000):
+        if a*i + b*j == c:
+            if d*i + e*j == f:
+                x = i
+                y = j
+                break
+print(x, y)
+'''
+
