@@ -795,3 +795,13 @@ for i in range(len(coordinateList)):
     print(coordinateList[i][0], coordinateList[i][1])
 '''
 
+# 11651
+'''
+import sys
+N = int(sys.stdin.readline())
+coordinateList = [tuple(map(int, sys.stdin.readline().split())) for _ in range(N)]
+coordinateList.sort(key=lambda x:(x[1],x[0]))
+for i in range(len(coordinateList)):
+    print(coordinateList[i][0], coordinateList[i][1])
+'''
+
