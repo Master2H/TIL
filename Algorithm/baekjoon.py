@@ -711,3 +711,28 @@ for i in range(-999,1000):
 print(x, y)
 '''
 
+# 1018(미완)
+'''
+import sys
+
+N, M = map(int, sys.stdin.readline().split())
+chessLine = [sys.stdin.readline().split() for _ in range(N)]
+print(chessLine)
+'''
+
+# 1436
+'''
+N = int(input())
+answer = 0
+count = 0
+i = 0
+while True:
+    if '666' in str(i):
+        count += 1
+        if N == count:
+            answer = i
+            break
+    i += 1
+print(answer)
+'''
+
