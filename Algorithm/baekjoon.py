@@ -818,3 +818,14 @@ for i in wordList:
     print(i)
 '''
 
+# 10814
+'''
+import sys
+
+N = int(sys.stdin.readline())
+memberList = [sys.stdin.readline().split() for _ in range(N)]
+memberList.sort(key=lambda x:int(x[0]))
+for i in memberList:
+    print(' '.join(i))
+'''
+
