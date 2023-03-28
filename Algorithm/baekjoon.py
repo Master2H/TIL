@@ -736,3 +736,25 @@ while True:
 print(answer)
 '''
 
+# 2108
+'''
+import sys
+from collections import Counter
+N = int(sys.stdin.readline())
+numberList = [int(sys.stdin.readline()) for _ in range(N)]
+numberList.sort()
+cnt = Counter(numberList)
+freq = cnt.most_common(2)
+if len(freq) >= 2:
+    if freq[0][1] == freq[1][1]:
+        freq = freq[1][0]
+    else:
+        freq = freq[0][0]
+else:
+    freq = numberList[0]
+print(f"""{round(sum(numberList)/N)}
+{numberList[int((N/2))]}
+{freq}
+{max(numberList)-min(numberList)}""")
+'''
+
