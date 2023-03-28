@@ -766,3 +766,13 @@ N = int(''.join(sorted(N, reverse=True)))
 print(N)
 '''
 
+# 11650
+'''
+import sys
+N = int(sys.stdin.readline())
+coordinateList = [tuple(map(int, sys.stdin.readline().split())) for _ in range(N)]
+coordinateList.sort()
+for i in range(len(coordinateList)):
+    print(coordinateList[i][0], coordinateList[i][1])
+'''
+
