@@ -711,13 +711,32 @@ for i in range(-999,1000):
 print(x, y)
 '''
 
-# 1018(미완)
+# 1018 (google reference)
 '''
 import sys
-
 N, M = map(int, sys.stdin.readline().split())
-chessLine = [sys.stdin.readline().split() for _ in range(N)]
-print(chessLine)
+chessLine = [list(map(str, sys.stdin.readline().strip("\n"))) for _ in range(N)]
+cnt = []
+for i in range(N-7):
+    for j in range(M-7):
+        w = 0
+        b = 0
+        for x in range(i, i+8):
+            for y in range(j, j+8):
+                if (x + y) % 2 == 0:
+                    if chessLine[x][y] != 'W':
+                        w += 1
+                    else:
+                        b += 1
+                else:
+                    if chessLine[x][y] != 'B':
+                        w += 1
+                    else:
+                        b += 1
+        cnt.append(w)
+        cnt.append(b)
+
+print(min(cnt))
 '''
 
 # 1436
