@@ -829,3 +829,14 @@ for i in memberList:
     print(' '.join(i))
 '''
 
+# 18870 (google reference - 시간초과 문제 해결을 위해 dictionary 활용)
+'''
+import sys
+N = int(sys.stdin.readline())
+NumList = list(map(int, sys.stdin.readline().split()))
+NumOrder = sorted(list(set(NumList)))
+dic = {NumOrder[i] : i for i in range(len(NumOrder))}
+for i in NumList:
+    print(dic[i], end = ' ')
+'''
+
