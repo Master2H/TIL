@@ -758,3 +758,11 @@ print(f"""{round(sum(numberList)/N)}
 {max(numberList)-min(numberList)}""")
 '''
 
+# 1427
+'''
+import sys
+N = sys.stdin.readline().strip("\n")
+N = int(''.join(sorted(N, reverse=True)))
+print(N)
+'''
+
