@@ -805,3 +805,16 @@ for i in range(len(coordinateList)):
     print(coordinateList[i][0], coordinateList[i][1])
 '''
 
+# 1181
+'''
+import sys
+
+N = int(sys.stdin.readline())
+wordList = [sys.stdin.readline().strip() for _ in range(N)]
+wordList = list(set(wordList))
+wordList.sort(key=lambda x : (len(x),x))
+
+for i in wordList:
+    print(i)
+'''
+
