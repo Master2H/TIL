@@ -959,3 +959,12 @@ for _ in range(testCase):
     print()
 '''
 
+# 2903
+'''
+N = int(input())
+number = 2
+for _ in range(N):
+    number = (number + number-1)
+print(number**2)
+'''
+
