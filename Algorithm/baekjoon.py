@@ -968,3 +968,18 @@ for _ in range(N):
 print(number**2)
 '''
 
+# 10815
+'''
+import sys
+N = int(sys.stdin.readline())
+numList = list(map(int, sys.stdin.readline().split()))
+numDict = {x : 1 for x in numList}
+M = int(sys.stdin.readline())
+for i in list(map(int, sys.stdin.readline().split())):
+    try:
+        temp = numDict[i]
+        print(1, end = " ")
+    except:
+        print(0, end = " ")
+'''
+
