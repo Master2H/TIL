@@ -926,3 +926,36 @@ while True:
 print(answer)
 '''
 
+# 2720
+'''
+import sys
+
+testCase = int(sys.stdin.readline())
+coin = [25, 10, 5, 1]
+for _ in range(testCase):
+    answer = [0, 0, 0, 0]
+    change = int(sys.stdin.readline())
+    while True:
+        if change == 0:
+            break
+        if change >= coin[0]:
+            answer[0] += 1
+            change = change - coin[0]
+            continue
+        elif change >= coin[1]:
+            answer[1] += 1
+            change = change - coin[1]
+            continue
+        elif change >= coin[2]:
+            answer[2] += 1
+            change = change - coin[2]
+            continue
+        elif change >= coin[3]:
+            answer[3] += 1
+            change = change - coin[3]
+            continue
+    for i in answer:
+        print(i, end = " ")
+    print()
+'''
+
