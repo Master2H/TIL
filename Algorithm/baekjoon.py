@@ -1014,3 +1014,21 @@ for i in nameSet:
     print(i)
 '''
 
+# 10816
+'''
+import sys
+import collections
+
+input = sys.stdin.readline
+N = int(input())
+Ncard = list(map(int, input().split()))
+cardSet = collections.Counter(Ncard)
+M = int(input())
+nums = list(map(int, input().split()))
+for i in nums:
+    if i in cardSet:
+        print(cardSet[i], end = ' ')
+    else:
+        print(0, end =' ')
+'''
+
