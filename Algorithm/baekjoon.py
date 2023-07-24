@@ -1051,3 +1051,14 @@ for i in answer:
     print(i)
 '''
 
+# 1269
+import sys
+import collections
+
+input = sys.stdin.readline
+
+A, B = map(int, input().split())
+ASet = list(map(int, input().split()))
+BSet = list(map(int, input().split()))
+answer = collections.Counter(ASet+BSet)
+print(list(answer.values()).count(1))
