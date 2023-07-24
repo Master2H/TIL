@@ -983,3 +983,17 @@ for i in list(map(int, sys.stdin.readline().split())):
         print(0, end = " ")
 '''
 
+# 14425
+'''
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+S = {input() for _ in range(N)}
+answer = 0
+for i in range(M):
+    a = input()
+    if a in S:
+        answer += 1
+print(answer)
+'''
+
