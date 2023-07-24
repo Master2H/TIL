@@ -1052,6 +1052,7 @@ for i in answer:
 '''
 
 # 1269
+'''
 import sys
 import collections
 
@@ -1062,3 +1063,17 @@ ASet = list(map(int, input().split()))
 BSet = list(map(int, input().split()))
 answer = collections.Counter(ASet+BSet)
 print(list(answer.values()).count(1))
+'''
+
+# 11478
+'''
+S = input()
+answer = set()
+for i in range(len(S)):
+    for j in range(1,len(S)+1):
+        if i >= j:
+            pass
+        else:
+            answer.add(S[i:j])
+print(len(answer))
+'''
