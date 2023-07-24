@@ -1032,3 +1032,22 @@ for i in nums:
         print(0, end =' ')
 '''
 
+# 1764
+'''
+import sys
+
+input = sys.stdin.readline
+N, M = map(int, input().split())
+notHear = {input().strip() for _ in range(N)}
+answer = []
+for _ in range(M):
+    name = input().strip()
+    if name in notHear:
+        answer.append(name)
+answer.sort()
+
+print(len(answer))
+for i in answer:
+    print(i)
+'''
+
