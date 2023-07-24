@@ -997,3 +997,20 @@ for i in range(M):
 print(answer)
 '''
 
+# 7785
+'''
+import sys
+input = sys.stdin.readline
+nameSet = set()
+n = int(input())
+for i in range(n):
+    name, log = input().split()
+    if log == 'enter':
+        nameSet.add(name)
+    if log == 'leave':
+        nameSet.discard(name)
+nameSet = sorted(list(nameSet), reverse=True)
+for i in nameSet:
+    print(i)
+'''
+
