@@ -1125,3 +1125,24 @@ A3, B3 = int(A3/gcd2), int(B3/gcd2)
 print(A3, B3)
 '''
 
+# 2485 (google reference)
+'''
+import sys
+import math
+input = sys.stdin.readline
+
+N = int(input())
+numList = [int(input()) for _ in range(N)]
+numList.sort()
+intervalList = [numList[i+1] - numList[i] for i in range(len(numList)-1)]
+intervalset = list(set(intervalList))
+gcd = intervalset[0]
+for i in range(1, len(intervalset)):
+    gcd = math.gcd(gcd, intervalset[i])
+
+answer = 0
+for i in intervalList:
+    answer += (i // gcd) - 1
+print(answer)
+'''
+
