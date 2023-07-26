@@ -1077,3 +1077,19 @@ for i in range(len(S)):
             answer.add(S[i:j])
 print(len(answer))
 '''
+
+# 1934
+
+import sys
+input = sys.stdin.readline
+
+T = int(input())
+for _ in range(T):
+    A, B = map(int, input().split())
+    AA, BB = A, B
+
+    while BB != 0:
+        AA, BB = BB, AA%BB
+    
+    print(int(A*B/AA))
+
