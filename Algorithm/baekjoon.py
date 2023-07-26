@@ -1177,3 +1177,23 @@ for _ in range(testCase):
             n += 1
 '''
 
+# 1929
+'''
+import math
+
+def isPrimeNumber(n):
+    if n == 1:
+        return False
+    
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+M, N = map(int, input().split())
+
+for i in range(M, N+1):
+     if isPrimeNumber(i) == True:
+         print(i)
+'''
+
