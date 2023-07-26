@@ -1146,3 +1146,34 @@ for i in intervalList:
 print(answer)
 '''
 
+# 4134
+'''
+import sys
+import math
+input = sys.stdin.readline
+
+def isPrimeNumber(n):
+    for i in range(2, int(math.sqrt(n)) + 1):
+                if n % i == 0:
+                     return False
+    return True
+
+testCase = int(input())
+
+for _ in range(testCase):
+    n = int(input())
+
+    if n <= 2:
+        print(2)
+    elif n == 3:
+        print(3)
+    elif n == 4:
+        print(5)
+    else:
+        while True:
+            if isPrimeNumber(n) == True:
+                 print(n)
+                 break
+            n += 1
+'''
+
