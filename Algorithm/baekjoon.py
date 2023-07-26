@@ -1079,7 +1079,7 @@ print(len(answer))
 '''
 
 # 1934
-
+'''
 import sys
 input = sys.stdin.readline
 
@@ -1092,4 +1092,16 @@ for _ in range(T):
         AA, BB = BB, AA%BB
     
     print(int(A*B/AA))
+'''
+
+# 13241
+'''
+A, B = map(int, input().split())
+AA, BB = A, B
+
+while BB != 0:
+    AA, BB = BB, AA%BB
+    
+print(int(A*B/AA))
+'''
 
