@@ -1105,3 +1105,23 @@ while BB != 0:
 print(int(A*B/AA))
 '''
 
+# 1735
+'''
+A1, B1 = map(int, input().split())
+A2, B2 = map(int, input().split())
+
+def getGCD(a, b):
+    aa, bb = a, b
+    
+    while bb != 0:
+        aa, bb = bb, aa%bb
+    return aa
+gcd1 = getGCD(B1, B2)
+B3 = int(B1*B2/gcd1)
+A3 = int(A1*(B3/B1) + A2*(B3/B2))
+
+gcd2 = getGCD(A3, B3)
+A3, B3 = int(A3/gcd2), int(B3/gcd2)
+print(A3, B3)
+'''
+
