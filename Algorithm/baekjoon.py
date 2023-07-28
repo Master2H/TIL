@@ -1223,3 +1223,26 @@ while True:
     print(answer)
 '''
 
+# 17103
+'''
+import sys
+
+primeNum = [False, False] + [True]*999999
+
+for i in range(2, 1000001):
+    if primeNum[i]:
+        for j in range(i*2, 1000001, i):
+            primeNum[j] = False
+
+testCase = int(input())
+
+for i in range(testCase):
+    N = int(input())
+    answer = 0
+
+    for j in range(2, N//2+1):
+        if primeNum[j] and primeNum[N-j]:
+                    answer += 1
+    print(answer)
+'''
+
