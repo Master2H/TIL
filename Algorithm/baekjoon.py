@@ -1255,3 +1255,15 @@ N = int(input())
 print(int(math.sqrt(N)))
 '''
 
+# 15439
+'''
+N = int(input())
+print(N**2-N)
+'''
+
+# 24723
+'''
+N = int(input())
+print(2**N)
+'''
+
