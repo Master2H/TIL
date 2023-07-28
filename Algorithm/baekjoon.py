@@ -1246,3 +1246,12 @@ for i in range(testCase):
     print(answer)
 '''
 
+# 13909
+'''
+import math
+
+N = int(input())
+
+print(int(math.sqrt(N)))
+'''
+
