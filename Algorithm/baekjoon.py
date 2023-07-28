@@ -1307,3 +1307,38 @@ for _ in range(T):
     print(math.factorial(M)//(math.factorial(M-N)*math.factorial(N)))
 '''
 
+# 1037
+'''
+number = int(input())
+realDivList = list(map(int, input().split()))
+realDivList.sort()
+print(realDivList[0]*realDivList[-1])
+'''
+
+# 25192
+'''
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+answer = 0
+logList = [input().rstrip() for _ in range(N)]
+answerList = []
+for i in range(len(logList)):
+    if logList[i] == 'ENTER':
+        answerList.append(i)
+if len(answerList) == 1:
+    print(len(set(logList))-1)
+elif len(answerList) == 2:
+    answer += len(set(logList[answerList[0]+1:answerList[1]])) + len(set(logList[answerList[1]+1:]))
+    print(answer)
+else:
+    for i in range(len(answerList)-1):
+        if i == len(answerList) - 2:
+            answer += len(set(logList[answerList[i+1]+1:])) + len(set(logList[answerList[i]+1:answerList[i+1]]))
+        else:
+            answer += len(set(logList[answerList[i]+1:answerList[i+1]]))
+
+    print(answer)
+'''
+
