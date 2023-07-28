@@ -1317,6 +1317,7 @@ print(realDivList[0]*realDivList[-1])
 
 # 25192
 '''
+(My Code)
 import sys
 input = sys.stdin.readline
 
@@ -1340,5 +1341,26 @@ else:
             answer += len(set(logList[answerList[i]+1:answerList[i+1]]))
 
     print(answer)
+
+(Best Code)
+N = int(input())
+dic = {}
+count = 0
+
+for i in range(N):
+    Input = input()
+
+    if Input == 'ENTER':
+        for key, value in dic.items():
+            if value == 1:
+                count += 1
+        dic = {}
+    else:
+        if Input not in dic:
+            dic[Input] = 1
+for key, value in dic.items():
+    if value == 1:
+        count += 1
+print(count)
 '''
 
