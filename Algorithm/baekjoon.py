@@ -1267,3 +1267,22 @@ N = int(input())
 print(2**N)
 '''
 
+# 10872
+'''
+(재귀함수)
+N = int(input())
+
+def factorial(x):
+    if x == 0:
+        return 1
+    elif x == 1:
+        return 1
+    else:
+        return x * factorial(x - 1)
+print(factorial(N))
+(math 라이브러리 활용)
+import math
+N = int(input())
+print(math.factorial(N))
+'''
+
