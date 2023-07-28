@@ -1197,3 +1197,29 @@ for i in range(M, N+1):
          print(i)
 '''
 
+# 4948
+'''
+import math
+
+def isPrimeNumber(x):
+    if x == 1:
+        return False
+    
+    for i in range(2, int(math.sqrt(x)) + 1):
+        if x % i == 0:
+            return False
+    return True
+
+while True:
+    n = int(input())
+    answer = 0
+
+    if n == 0:
+        break
+
+    for i in range(n+1, 2*n + 1):
+        if isPrimeNumber(i) == True:
+            answer += 1
+    print(answer)
+'''
+
