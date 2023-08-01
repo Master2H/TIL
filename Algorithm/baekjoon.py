@@ -1364,3 +1364,42 @@ for key, value in dic.items():
 print(count)
 '''
 
+# 26069
+'''
+(MY Code)
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+danceList = set()
+
+for i in range(N):
+    A, B = map(str, input().split())
+    if (A == 'ChongChong') or (B == 'ChongChong'):
+        danceList.add(A)
+        danceList.add(B)
+    elif A in danceList:
+        danceList.add(B)
+    elif B in danceList:
+        danceList.add(A)
+print(len(danceList))
+
+(Best Code)
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+dance = {'ChongChong'}
+
+for i in range(1, n+1):
+    a, b = input().rstrip().split()
+
+    if a in dance:
+        dance.add(b)
+
+    if b in dance:
+        dance.add(a)
+
+print(len(dance))
+'''
+
