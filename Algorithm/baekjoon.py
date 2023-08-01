@@ -1403,3 +1403,45 @@ for i in range(1, n+1):
 print(len(dance))
 '''
 
+# 20920 (google Reference)
+'''
+(Version 1)
+import sys
+
+input =sys.stdin.readline
+vocaDic = dict()
+N, M = map(int, input().split())
+for _ in range(N):
+    voca = input().rstrip()
+    if len(voca) < M:
+        continue
+    if vocaDic.get(voca):
+        vocaDic[voca][0] += 1
+    else:
+        vocaDic[voca] = [1, len(voca), voca]
+
+answer = sorted(vocaDic.items(), key = lambda x: (-x[1][0], -x[1][1], x[1][2]))
+
+for i in answer:
+    print(i[0])
+
+(Version 2)
+import sys
+
+input =sys.stdin.readline
+vocaDic = dict()
+N, M = map(int, input().split())
+for _ in range(N):
+    voca = input().rstrip()
+    if len(voca) < M:
+        continue
+    if voca in vocaDic:
+        vocaDic[voca] += 1
+    else:
+        vocaDic[voca] = 0
+answer = sorted(vocaDic.items(), key = lambda x: (-x[1], -len(x[0]), x[0]))
+
+for i in answer:
+    print(i[0])
+'''
+
