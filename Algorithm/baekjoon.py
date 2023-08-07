@@ -1521,3 +1521,28 @@ for _ in range(K):
 print(sum(stack))
 '''
 
+# 9012
+'''
+import sys
+input = sys.stdin.readline
+
+T = int(input())
+for _ in range(T):
+    stack = []
+    Input = input().rstrip()
+    for ps in Input:
+        if ps == '(':
+            stack.append(ps)
+        else:
+            if len(stack) == 0:
+                stack.append(ps)
+                break
+            else:
+                stack.pop(-1)
+    if len(stack) != 0:
+        print('NO')
+    else:
+        print('YES')
+                    
+'''
+
