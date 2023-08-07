@@ -1546,3 +1546,33 @@ for _ in range(T):
                     
 '''
 
+# 4949
+'''
+while True:
+    stack = []
+    Input = input()
+
+    if Input == '.':
+        break
+    for i in Input:
+        if (i == '(') or (i == '['):
+            stack.append(i)
+        elif i == ')':
+            if len(stack) == 0 or stack[-1] == '[':
+                stack.append(i)
+                break
+            else:
+                stack.pop(-1)
+        elif i == ']':
+            if len(stack) == 0 or stack[-1] == '(':
+                stack.append(i)
+                break
+            else:
+                stack.pop(-1)
+    
+    if len(stack) == 0:
+        print('yes')
+    else:
+        print('no')
+'''
+
