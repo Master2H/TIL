@@ -1474,3 +1474,32 @@ for _ in range(N):
             print(stack[-1])
 '''
 
+# 28278
+'''
+import sys
+input = sys.stdin.readline
+stack = []
+N = int(input())
+for _ in range(N):
+    cmd = input().split()
+    if len(cmd) == 2:
+        stack.append(cmd[1])
+    if cmd[0] == '2':
+        if len(stack) == 0:
+            print(-1)
+        else:
+            print(int(stack.pop(-1)))
+    if cmd[0] == '3':
+        print(len(stack))
+    if cmd[0] == '4':
+        if len(stack) == 0:
+            print(1)
+        else:
+            print(0)
+    if cmd[0] == '5':
+        if len(stack) == 0:
+            print(-1)
+        else:
+            print(stack[-1])
+'''
+
