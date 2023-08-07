@@ -1657,3 +1657,15 @@ for _ in range(N):
             print(-1)
 '''
 
+# 2164
+'''
+from collections import deque
+
+N = int(input())
+cardList = deque([x for x in range(1, N+1)])
+while len(cardList) != 1:
+    cardList.popleft()
+    cardList.rotate(-1)
+print(cardList[0])
+'''
+
