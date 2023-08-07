@@ -1576,3 +1576,47 @@ while True:
         print('no')
 '''
 
+# 12789
+'''
+(My Code)
+N = int(input())
+stack = [1001]
+count = 1
+numList = list(map(int, input().split()))
+
+for num in numList:
+    if num == count:
+        count += 1
+        continue
+    if stack[-1] == count:
+        while stack[-1] == count:
+            count += 1
+            stack.pop()
+    if stack[-1] <= num:
+        print('Sad')
+        break
+    else:
+        stack.append(num)
+if count == stack[-1]:
+    print('Nice')
+
+(Best Code)
+from collections import deque
+
+N = int(input())
+numList = deque(map(int, input().split()))
+count = 1
+stack = deque()
+
+while numList:
+    if numList[0] == count:
+        count += 1
+        numList.popleft()
+    else:
+        stack.append(numList.popleft())
+    while stack and stack[-1] == count:
+        stack.pop()
+        count += 1
+print('Nice' if not stack else 'Sad')
+'''
+
