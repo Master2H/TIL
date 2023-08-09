@@ -1669,3 +1669,37 @@ while len(cardList) != 1:
 print(cardList[0])
 '''
 
+# 11866 (Google Reference)
+'''
+(Method 1)
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+N, K = map(int,input().split())
+numList = deque([x for x in range(1, N+1)])
+answer = []
+while numList:
+    for i in range(K-1):
+        numList.append(numList.popleft())
+    answer.append(str(numList.popleft()))
+
+print('<' + ', '.join(answer)+'>')
+
+(Method 2)
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+N, K = map(int, input().split())
+numList = [x for x in range(1, N+1)]
+idx = 0
+answer = []
+while numList:
+    idx += K - 1
+    if idx >= len(numList):
+        idx %= len(numList)
+    answer.append(str(numList.pop(idx)))
+print('<', ', '.join(answer), '>', sep ='')
+'''
+
