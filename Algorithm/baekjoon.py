@@ -1747,3 +1747,22 @@ for _ in range(N):
             print(-1)
 '''
 
+# 2346(미완)
+'''
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+num = input().split()
+bl = deque()
+answer = [1]
+for i in range(N):
+    bl.append((i+1,int(num[i])))
+while deque:
+    val = bl[0]
+    bl.popleft()
+    for x in range(val):
+        bl.append(bl.popleft())
+    answer.append()
+'''
