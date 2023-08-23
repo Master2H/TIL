@@ -1771,3 +1771,26 @@ while bl:
 print(' '.join(answer))
 '''
 
+# 24511
+'''
+import sys
+from collections import deque
+input = sys.stdin.readline
+
+N = int(input())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+M = int(input())
+C = list(input().split())
+answer = []
+for i in range(N):
+    if A[i] == 0:
+        answer.append(str(B[i]))
+answer.reverse()
+if len(answer) >= M:
+    answer = answer[:M]
+else:
+    answer = answer + C[:M - len(answer)]
+print(' '.join(answer))
+'''
+
