@@ -1747,7 +1747,7 @@ for _ in range(N):
             print(-1)
 '''
 
-# 2346(미완)
+# 2346 (Error Fixed by Google Reference)
 '''
 from collections import deque
 import sys
@@ -1756,13 +1756,18 @@ input = sys.stdin.readline
 N = int(input())
 num = input().split()
 bl = deque()
-answer = [1]
+answer = []
+idx = 0
 for i in range(N):
-    bl.append((i+1,int(num[i])))
-while deque:
-    val = bl[0]
-    bl.popleft()
-    for x in range(val):
-        bl.append(bl.popleft())
-    answer.append()
+    bl.append((i, int(num[i])))
+while bl:
+    idx, val = bl.popleft()
+    answer.append(str(idx + 1))
+    if val > 0:
+        bl.rotate(-(val - 1))
+    elif val < 0:
+        bl.rotate(-val)
+    
+print(' '.join(answer))
 '''
+
