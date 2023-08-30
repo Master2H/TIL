@@ -1884,3 +1884,31 @@ m_sort(A_list)
 print(answer[K-1] if len(answer) > K else -1)
 '''
 
+# 4779
+'''
+def cantor(s):
+    if s == '-':
+        return '-'
+    
+    part1 = s[:len(s)//3]
+    part2 = s[len(s)//3:len(s)//3*2]
+    part3 = s[len(s)//3*2:]
+
+    if part1 == '-':
+        return '- -'
+    
+    part2 = part2.replace('-',' ')
+
+
+    return cantor(part1) + part2 + cantor(part3)
+
+while True:
+    try:
+        N = int(input())
+        string = '-'*3**N
+        answer = cantor(string)
+        print(answer)
+    except EOFError:
+        break
+'''
+
