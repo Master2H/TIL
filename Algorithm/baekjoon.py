@@ -1837,3 +1837,50 @@ for _ in range(testCase):
     print(isPalindrome(S), count)
 '''
 
+# 24060 (병합정렬 정의 및 코드 Google Reference)
+'''
+import sys
+input = sys.stdin.readline
+
+def m_sort(L):
+    if len(L) == 1:
+        return L
+    
+    mid = (len(L) + 1) // 2
+
+    a_1 = m_sort(L[:mid])
+    a_2 = m_sort(L[mid:])
+
+    i = j = 0
+    tmp = []
+
+    while i < len(a_1) and j < len(a_2):
+        if a_1[i] < a_2[j]:
+            tmp.append(a_1[i])
+            answer.append(a_1[i])
+            i += 1
+        else:
+            tmp.append(a_2[j])
+            answer.append(a_2[j])
+            j += 1
+    
+    while i < len(a_1):
+        tmp.append(a_1[i])
+        answer.append(a_1[i])
+        i += 1
+    
+    while j < len(a_2):
+        tmp.append(a_2[j])
+        answer.append(a_2[j])
+        j += 1
+    
+    return tmp
+
+answer = []
+A, K = map(int, input().split())
+A_list = list(map(int, input().split()))
+m_sort(A_list)
+
+print(answer[K-1] if len(answer) > K else -1)
+'''
+
