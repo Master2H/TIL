@@ -1912,3 +1912,22 @@ while True:
         break
 '''
 
+# 2447 (코드 Google Reference)
+'''
+def make_star(N):
+    if N == 1:
+        return ['*']
+    stars = make_star(N//3)
+    L = []
+
+    for star in stars:
+        L.append(star*3)
+    for star in stars:
+        L.append(star + ' '*(N//3) + star)
+    for star in stars:
+        L.append(star*3)
+    
+    return L
+N = int(input())
+print('\n'.join(make_star(N)))
+'''
