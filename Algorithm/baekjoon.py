@@ -1952,3 +1952,18 @@ print(2**N-1) # 하노이탑 최소 이동 횟수
 hanoi_tower(N,1,3)
 '''
 
+# 15649
+'''
+from itertools import combinations, permutations
+
+N, M = map(int, input().split())
+num_list = [x for x in range(1, N+1)]
+answer  = list(permutations(num_list, M))
+
+for i in answer:
+    for j in i:
+        print(j, end = ' ')
+    print()
+'''
+
+
