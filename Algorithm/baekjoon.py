@@ -1926,8 +1926,29 @@ def make_star(N):
         L.append(star + ' '*(N//3) + star)
     for star in stars:
         L.append(star*3)
-    
+
+        
     return L
 N = int(input())
 print('\n'.join(make_star(N)))
 '''
+
+# 11729 (Google Reference)
+'''
+N = int(input())
+
+def hanoi_tower(n, start, end):
+    if n == 1:
+        print(start, end)
+        return
+    
+    hanoi_tower(n-1, start, 6-start-end)
+    
+    print(start, end)
+
+    hanoi_tower(n-1, 6-start-end, end)
+
+print(2**N-1) # 하노이탑 최소 이동 횟수
+hanoi_tower(N,1,3)
+'''
+
