@@ -1966,4 +1966,17 @@ for i in answer:
     print()
 '''
 
+# 15650
+'''
+from itertools import combinations
+N, M = map(int, input().split())
+
+NList = [x for x in range(1, N+1)]
+
+answer = list(combinations(NList, M))
+
+for i in answer:
+    i = list(map(str, list(i)))
+    print(' '.join(i))
+'''
 
