@@ -1912,7 +1912,7 @@ while True:
         break
 '''
 
-# 2447 (코드 Google Reference)
+# 2447 (Google Reference)
 '''
 def make_star(N):
     if N == 1:
@@ -1968,6 +1968,7 @@ for i in answer:
 
 # 15650
 '''
+(My Code)
 from itertools import combinations
 N, M = map(int, input().split())
 
@@ -1978,5 +1979,20 @@ answer = list(combinations(NList, M))
 for i in answer:
     i = list(map(str, list(i)))
     print(' '.join(i))
-'''
 
+(Best Code)
+N, M = map(int, input().split())
+s = []
+def dfs(start):
+    if len(s) == M:
+        print(' '.join(map(str, s)))
+        return
+    
+    for i in range(start, N+1):
+        if i not in s:
+            s.append(i)
+            dfs(i+1)
+            s.pop()
+
+dfs(1)
+'''
