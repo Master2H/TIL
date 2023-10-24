@@ -2034,6 +2034,36 @@ dfs(1)
 
 # 9663 (Google Reference)
 '''
+(My Code)
+N = int(input())
+
+answer = 0
+s = [0] * N
+
+def promising(x):
+    for i in range(x):
+        if s[x] == s[i] or abs(s[x]-s[i]) == abs(x - i):
+            return False
+    
+    return True
+
+
+def find_queen(x):
+    global answer
+    if x == N:
+        answer += 1
+        return
+    
+    else:
+        for i in range(N):
+            s[x] = i
+            if promising(x):
+                find_queen(x+1)
+
+find_queen(0)
+print(answer)
+
+(Best Code)
 n = int(input())
 
 ans = 0
