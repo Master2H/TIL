@@ -2093,3 +2093,40 @@ n_queens(0)
 print(ans)
 '''
 
+# 2580(미완)
+'''
+zero_list = []
+sudoku = []
+for _ in range(9):
+    temp = input().split()
+    sudoku.append(temp)
+sudoku_1 = sudoku.copy()
+
+def isPromising(x):
+    for i in zero_list:
+        if 
+
+def find_zero():
+    for i in sudoku_1:
+        for j in i:
+            if int(j) != 0:
+                continue
+            else:
+                row = sudoku_1.index(i)
+                column = i.index(j)
+                zero_list.append((row, column))
+                i[i.index(j)] = 10
+    return
+
+
+
+def solve_sudoku(x):
+    find_zero()
+
+    for i in sudoku_1:
+        for j in i:
+                if int(j) != 0:
+                    continue
+                else:
+                    if isPromising(x):
+'''
