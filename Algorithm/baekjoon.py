@@ -2093,7 +2093,7 @@ n_queens(0)
 print(ans)
 '''
 
-# 2580(미완)
+# 2580(미완성)
 '''
 zero_list = []
 sudoku = []
