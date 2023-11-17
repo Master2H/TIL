@@ -2093,7 +2093,7 @@ n_queens(0)
 print(ans)
 '''
 
-# 2580(미완성)
+# 2580
 '''
 zero_list = []
 sudoku = []
@@ -2129,4 +2129,5 @@ def solve_sudoku(x):
                     continue
                 else:
                     if isPromising(x):
+
 '''
