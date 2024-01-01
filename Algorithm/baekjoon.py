@@ -2133,8 +2133,8 @@ def solve_sudoku(x):
 
 '''
 
-# 14888
-
+# 14888 (Google Reference)
+'''
 import sys
 input = sys.stdin.readline
 
@@ -2150,22 +2150,23 @@ def find_max_min(depth, total, plus, minus, multiply, divine):
     global max_
     global min_
 
-    max_ = max(max_, total)
-    min_ = min(min_, total)
-
     if depth == N:
-        return
+            max_ = max(max_, total)
+            min_ = min(min_, total)
+            return
     
     else:
         if plus:
-            find_max_min(depth + 1, total + num_list[depth], plus, minus, multiply, divine)
+            find_max_min(depth + 1, total + num_list[depth], plus - 1, minus, multiply, divine)
         if minus:
-            find_max_min(depth + 1, total - num_list[depth], plus, minus, multiply, divine)
+            find_max_min(depth + 1, total - num_list[depth], plus, minus - 1, multiply, divine)
         if multiply:
-            find_max_min(depth + 1, total * num_list[depth], plus, minus, multiply, divine)
+            find_max_min(depth + 1, total * num_list[depth], plus, minus, multiply - 1, divine)
         if divine:
-            find_max_min(depth + 1, total // num_list[depth], plus, minus, multiply, divine)
+            find_max_min(depth + 1, int(total / num_list[depth]), plus, minus, multiply, divine - 1)
 
 find_max_min(1, num_list[0], cal_list[0], cal_list[1], cal_list[2], cal_list[3])
 print(max_)
 print(min_)
+'''
+
