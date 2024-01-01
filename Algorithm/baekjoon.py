@@ -2122,6 +2122,7 @@ def find_zero():
 
 def solve_sudoku(x):
     find_zero()
+    
 
     for i in sudoku_1:
         for j in i:
@@ -2131,3 +2132,40 @@ def solve_sudoku(x):
                     if isPromising(x):
 
 '''
+
+# 14888
+
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+num_list = [int(x) for x in input().split()]
+cal_list = [int(x) for x in input().split()]
+
+max_ = -10e9
+min_ = 10e9
+
+def find_max_min(depth, total, plus, minus, multiply, divine):
+
+    global max_
+    global min_
+
+    max_ = max(max_, total)
+    min_ = min(min_, total)
+
+    if depth == N:
+        return
+    
+    else:
+        if plus:
+            find_max_min(depth + 1, total + num_list[depth], plus, minus, multiply, divine)
+        if minus:
+            find_max_min(depth + 1, total - num_list[depth], plus, minus, multiply, divine)
+        if multiply:
+            find_max_min(depth + 1, total * num_list[depth], plus, minus, multiply, divine)
+        if divine:
+            find_max_min(depth + 1, total // num_list[depth], plus, minus, multiply, divine)
+
+find_max_min(1, num_list[0], cal_list[0], cal_list[1], cal_list[2], cal_list[3])
+print(max_)
+print(min_)
