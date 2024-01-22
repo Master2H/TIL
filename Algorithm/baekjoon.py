@@ -2170,3 +2170,17 @@ print(max_)
 print(min_)
 '''
 
+# 14889
+'''
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+rowList = []
+for _ in range(N):
+    a = list(map(int, input().split()))
+    rowList.append(a)
+
+min_ = 10e6
+'''
+
