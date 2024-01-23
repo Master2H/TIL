@@ -2171,18 +2171,18 @@ print(min_)
 '''
 
 # 14889
-
+'''
 import sys
 input = sys.stdin.readline
 
 N = int(input())
 matrix = [list(map(int, input().split())) for _ in range(N)]
-min_ = sys.maxsize
+ins = sys.maxsize
 visited = [False] * N
 
 def DFS(depth, idx):
 
-    global min_
+    global ins
 
 
     if depth == (N // 2):
@@ -2193,4 +2193,20 @@ def DFS(depth, idx):
         for i in range(N):
             for j in range(N):
                 if visited[i] and visited[j]:
-                    
+                    start += matrix[i][j]
+                if not visited[i] and not visited[j]:
+                    link += matrix[i][j]
+        
+        ins = min(ins, abs(start-link))
+        return
+    
+    for i in range(idx, N):
+        if not visited[i]:
+            visited[i] = True
+            DFS(depth+1, i+1)
+            visited[i] = False
+
+DFS(0,0)
+print(ins)
+'''
+
