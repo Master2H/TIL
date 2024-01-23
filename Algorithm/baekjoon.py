@@ -2171,16 +2171,16 @@ print(min_)
 '''
 
 # 14889
-'''
+
 import sys
 input = sys.stdin.readline
 
 N = int(input())
-rowList = []
-for _ in range(N):
-    a = list(map(int, input().split()))
-    rowList.append(a)
+matrix = [list(map(int, input().split())) for _ in range(N)]
+min_ = sys.maxsize
+visited = [False] * N
 
-min_ = 10e6
-'''
-
+def DFS(depth, visited):
+    a = 0
+    if a == (N // 2):
+        if 
