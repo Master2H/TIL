@@ -2093,45 +2093,32 @@ n_queens(0)
 print(ans)
 '''
 
-# 2580
-'''
-zero_list = []
-sudoku = []
-for _ in range(9):
-    temp = input().split()
-    sudoku.append(temp)
-sudoku_1 = sudoku.copy()
+# 2580 (Google Reference)
+import sys
+input = sys.stdin.readline
+sudoku = [list(map(int, input().split())) for _ in range(9)]
 
-def isPromising(x):
-    for i in zero_list:
-        if 
+def row(a, n):
+    for i in range(9):
+        if n == sudoku[a][i]:
+            return False
+    return True
 
-def find_zero():
-    for i in sudoku_1:
-        for j in i:
-            if int(j) != 0:
-                continue
-            else:
-                row = sudoku_1.index(i)
-                column = i.index(j)
-                zero_list.append((row, column))
-                i[i.index(j)] = 10
-    return
+def column(a, n):
+    for i in range(9):
+        if n == sudoku[i][a]:
+            return False
+    return True
 
+def square(y, x, n):
+    for i in range(3):
+        for j in range(3):
+            if n == sudoku[y//3*3+i][x//3*3+j]:
+                return False
+    return True
 
 
-def solve_sudoku(x):
-    find_zero()
-    
 
-    for i in sudoku_1:
-        for j in i:
-                if int(j) != 0:
-                    continue
-                else:
-                    if isPromising(x):
-
-'''
 
 # 14888 (Google Reference)
 '''
