@@ -2097,6 +2097,11 @@ print(ans)
 import sys
 input = sys.stdin.readline
 sudoku = [list(map(int, input().split())) for _ in range(9)]
+blank = []
+for i in range(9):
+    for j in range(9):
+        if 0 == sudoku[i][j]:
+            blank.append([i,j])
 
 def row(a, n):
     for i in range(9):
@@ -2113,11 +2118,22 @@ def column(a, n):
 def square(y, x, n):
     for i in range(3):
         for j in range(3):
-            if n == sudoku[y//3*3+i][x//3*3+j]:
+            if n == sudoku[(y//3)*3+i][(x//3)*3+j]:
                 return False
     return True
 
+def find(n):
+    if n == len(blank):
+        for i in sudoku:
+            print(*i)
+        exit()
+    
+    for i in range(1,10):
+        x = blank[i][1]
+        y = blank[i][0]
 
+        if row(x, n) and column(y, n) and square(y, x, n):
+            
 
 
 # 14888 (Google Reference)
