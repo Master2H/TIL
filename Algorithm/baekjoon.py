@@ -2170,7 +2170,7 @@ print(max_)
 print(min_)
 '''
 
-# 14889
+# 14889 (Google Reference)
 '''
 import sys
 input = sys.stdin.readline
