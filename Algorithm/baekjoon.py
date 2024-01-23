@@ -2180,7 +2180,17 @@ matrix = [list(map(int, input().split())) for _ in range(N)]
 min_ = sys.maxsize
 visited = [False] * N
 
-def DFS(depth, visited):
-    a = 0
-    if a == (N // 2):
-        if 
+def DFS(depth, idx):
+
+    global min_
+
+
+    if depth == (N // 2):
+        
+        start = 0
+        link = 0
+
+        for i in range(N):
+            for j in range(N):
+                if visited[i] and visited[j]:
+                    
