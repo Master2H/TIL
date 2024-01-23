@@ -2094,6 +2094,7 @@ print(ans)
 '''
 
 # 2580 (Google Reference)
+'''
 import sys
 input = sys.stdin.readline
 sudoku = [list(map(int, input().split())) for _ in range(9)]
@@ -2129,11 +2130,16 @@ def find(n):
         exit()
     
     for i in range(1,10):
-        x = blank[i][1]
-        y = blank[i][0]
+        x = blank[n][1]
+        y = blank[n][0]
 
-        if row(x, n) and column(y, n) and square(y, x, n):
-            
+        if row(y, i) and column(x, i) and square(y, x, i):
+            sudoku[y][x] = i
+            find(n+1)
+            sudoku[y][x] = 0
+
+find(0)
+'''
 
 
 # 14888 (Google Reference)
